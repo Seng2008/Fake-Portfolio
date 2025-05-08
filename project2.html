@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2</title>
+  <style>
+    body {
+      background-color: #333;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 40px;
+      color: #ece1f3;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .header-left {
+        font-size: 5em;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding-left: 0px
+      }
+
+      .header-left:active {
+          color: rgb(199, 120, 235);
+      }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .info h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 18px;
+      margin: 6px 0;
+    }
+
+    .description {
+      flex: 1;
+      min-width: 100px;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-left: 10px;
+      white-space: normal; /*  wrap */
+      word-wrap: break-word; 
+    }
+
+    .gallery {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px; /* Reduces both row and column gap */
+      row-gap: 40px; 
+    }
+
+    .gallery img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .bride { 
+      position: relative;
+      width: 300px;
+      left: 3px;
+      top: -170px;
+
+    }
+
+  </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              document.body.classList.add('loaded');
+  
+              const headerLeft = document.querySelector('.header-left');
+              headerLeft.addEventListener('click', () => {
+                  headerLeft.style.color = 'blue';
+  
+                  setTimeout(() => {
+                      window.location.href = 'My Work.html';
+                  }, 300);
+              });
+          });
+      </script>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <div class="info">
+        <div class="header-left">project 2</div>
+        <p><strong>Project Type</strong><br>Bridal</p>
+        <p><strong>Date</strong><br>May 2020</p>
+      </div>
+      <div class="description">
+        <p>TA curated collection of bridal looks styled with elegance, creativity, and a touch of personal magic. 
+          Each piece reflects my passion for helping brides feel their most beautiful on their special day.<br><b>< click the title to go back ></b> </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="blckandwhite1.jpg" alt="Image 1">
+      <img src="blackandwhitef.jpg" alt="Image 2">
+      <img src="bride2.jpg" alt="Image 3">
+      <img src="bride2f.jpg" alt="Image 4">
+      <div class ="bride">
+        <img src="bride.jpg" alt="Image 5">
+      </div>
+      <img src="bridef.jpg" alt="Image 6">
+      
+    </div>
+  </div>
+</body>
+</html>

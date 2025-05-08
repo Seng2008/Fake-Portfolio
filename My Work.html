@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+        body {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            font-size: 100px;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+
+        body.loaded {
+            opacity: 1;
+        }
+        header {
+            background-color: #333;
+            color: #f1e1e1;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+        .header-left {
+            font-size: 1em;
+            cursor: pointer; /* clickable */
+            transition: color 0.3s ease;
+        }
+
+        .header-left {
+            font-size: 1em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding-left: 20px
+        }
+
+        .header-left:active {
+            color: rgb(199, 120, 235);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px; 
+        }
+        button {
+            background-color: #ce8ffb;
+            border-radius: 10px;
+            padding: 10px 15px; /* Adjusted padding */
+            width: auto; 
+            border: none;
+            margin-left: 20px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        button a {
+            color: rgb(62, 59, 59);
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none; 
+        }
+
+        button:hover {
+            transform: scale(1.1); /* pop-out effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+
+        .image-container {
+            position: relative;
+            width: 300px;
+            left: 260px;
+            top: 100px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 0px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container2 {
+            position: relative;
+            width: 300px;
+            left: 590px;
+            top: -373px;
+        }
+
+        .image-container2 img {
+            width: 100%;
+            border-radius: 0px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container2 img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container3 {
+            position: relative;
+            width: 300px;
+            left: 590px;
+            top: -373px;
+        }
+
+        .image-container3 img {
+            width: 100%;
+            border-radius: 0px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container3 img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container4 {
+            position: relative;
+            width: 300px;
+            left: 930px;
+            top: -1073px;
+        }
+
+        .image-container4 img {
+            width: 100%;
+            border-radius: 0px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container4 img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-overlay {
+            font-family: "GFS Didot", serif;
+            font-weight: 400;
+            font-size: 0.3em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 0px;
+        }
+
+        .image-container:hover .text-overlay {
+            opacity: 1;
+        }
+        .image-container:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .image-container2:hover .text-overlay {
+            opacity: 1;
+        }
+        .image-container2:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .image-container3:hover .text-overlay {
+            opacity: 1;
+        }
+        .image-container3:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .image-container4:hover .text-overlay {
+            opacity: 1;
+        }
+        .image-container4:hover .text-overlay {
+            opacity: 1;
+        }
+    </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('loaded');
+    
+                const headerLeft = document.querySelector('.header-left');
+                headerLeft.addEventListener('click', () => {
+                    headerLeft.style.color = 'blue';
+    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 300);
+                });
+            });
+        </script>
+    </head>
+            <nav>
+            <div class="header-left">Jennie Chuu.</div>
+            <nav class="nav-buttons">
+                <button><a href="http://127.0.0.1:5500/html.seng/about.html">About me</a></button>
+                <button><a href="services.html">Services</a></button>
+                <button><a href="My Work.html">My Work</a></button>
+                <button><a href="Hire.html">Hire</a></button>
+            </nav>
+            </nav>
+</head>
+
+<body>
+    <a href="http://127.0.0.1:5500/html.seng/project1.html" target="_blank">
+        <div class="image-container">
+          <img src="man1.jpg" alt="Image">
+          <div class="text-overlay">Project1</div>
+        </div>
+
+      </a>
+      <a href="http://127.0.0.1:5500/html.seng/project2.html" target="_blank">
+        <div class="image-container2">
+          <img src="blckandwhite2.jpg" alt="Image">
+          <div class="text-overlay">Project2</div>
+        </div>
+      </a>
+
+    
+      <a href="http://127.0.0.1:5500/html.seng/project3.html" target="_blank">
+        <div class="image-container3">
+          <img src="Zebra1.jpeg" alt="Image">
+          <div class="text-overlay">Project3</div>
+        </div>
+      </a>
+
+      <a href="http://127.0.0.1:5500/html.seng/Inspiration.html" target="_blank">
+        <div class="image-container4">
+          <img src="butterfly2.jpeg" alt="Image">
+          <div class="text-overlay">inspiration</div>
+        </div>
+      </a>
+      
+      
+
+
+</body>

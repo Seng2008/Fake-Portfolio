@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+        body {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            font-size: 100px;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        header {
+            background-color: #333333;
+            color: #f1e1e1;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main {
+            padding-top: 100px;
+        }
+        .header-left {
+            font-size: 1em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding-left: 20px
+        }
+
+        .header-left:active {
+            color: rgb(199, 120, 235);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px; 
+        }
+        button {
+            background-color: #ce8ffb;
+            border-radius: 10px;
+            padding: 10px 15px; /* Adjusted padding */
+            width: auto; 
+            border: none;
+            margin-left: 20px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        button a {
+            color: rgb(62, 59, 59);
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none; 
+        }
+
+        button:hover {
+            transform: scale(1.1); /* pop-out effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+        .Title {
+            font-size: 1em;
+            font-family: "Limelight", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            color: #8f76ff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .text-side {
+            flex: 1; 
+            padding-right: 20px;
+            
+        }
+        .text-side p{
+            font-size: 0.2em;
+            font-family: "Shadows Into Light", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #333;
+            
+        }
+        .picture1 {
+            position: absolute;
+            top: 300px; 
+            left: 950px; 
+            width: 420px; 
+            height: 300px;
+            z-index: 0;  
+        }
+        .picture2 {
+            position: absolute;
+            top: 470px; 
+            left: 1200px; 
+            width: 230px; 
+            height: 350px;
+            z-index: 0;  
+        }
+        .picture4 {
+            position: absolute;
+            top: 380px; 
+            left: 400px; 
+            width: 450px; 
+            height: 300px;
+            z-index: 0;  
+        }
+ 
+        .container {
+            display: flex;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 0px;
+            max-width: 300px;
+            max-height: 900px;
+            position: absolute;
+            top: 400px;     
+            left: 90px; 
+            margin: 0;
+        }
+
+        .image {
+            position: absolute;
+            top: 300px; 
+            left: 170px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+
+        .container2 {
+            display: flex;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 0px;
+            max-width: 300px;
+            max-height: 900px;
+            position: absolute; 
+            top: 480px;    
+            left: 500px;  
+            margin: 0;
+        }
+        .image2 {
+            position: absolute;
+            top: 380px; 
+            left: 580px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+
+        .container3 {
+            display: flex;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 0px;
+            max-width: 300px;
+            max-height: 900px;
+            position: absolute; 
+            top: 525px;   
+            left: 920px;     
+            margin: 0;
+        }
+        .image3 {
+            position: absolute;
+            top: 428px; 
+            left: 1000px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+        .header1 {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #8f76ff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .line1 {
+            position: absolute;
+            top: 455px; 
+            left: 170px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+        .line2 {
+            position: absolute;
+            top: 535px; 
+            left: 580px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+        .line3 {
+            position: absolute;
+            top: 575px; 
+            left: 1000px; 
+            width: 180px; 
+            height: auto;
+            z-index: 10;  
+        }
+    </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('loaded');
+    
+                const headerLeft = document.querySelector('.header-left');
+                headerLeft.addEventListener('click', () => {
+                    headerLeft.style.color = 'blue';
+    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 300);
+                });
+            });
+        </script>
+      <nav>
+        <div class="header-left">Jennie Chuu.</div>
+        <nav class="nav-buttons">
+            <button><a href="http://127.0.0.1:5500/html.seng/about.html">About me</a></button>
+            <button><a href="services.html">Services</a></button>
+            <button><a href="My Work.html">My Work</a></button>
+            <button><a href="http://127.0.0.1:5500/hire.html">Hire</a></button>
+        </nav>
+        </nav>
+    </head>
+
+<body>
+    <h1 class="Title"><u><i>Services</i></u></h1>
+    <img src="fashion2.jpg" alt="image" class="picture1">
+    <img src="male.avif" alt="image" class="picture2">
+    <img src="weddinga.jpg" alt="image" class="picture4">
+    <div class="container">
+        <div class="text-side">
+           
+            <p class="header1"><b>Personal Styling</b><p>
+            <p>
+                ~ Helping individuals curate outfits for daily wear, special events,
+                or to build a cohesive wardrobe that suits their body type, lifestyle, and personal style.<br><br>
+
+            - Includes outfit planning, shopping assistance, and wardrobe makeovers.<br><br><br>
+            </p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="text-side">
+            <p class="header1"><b>Wardrobe Makeover</b><p>
+                <p>
+                ~ Helping clients organize and refresh their closet to better reflect their style needs.<br><br>
+    
+                - Involves decluttering, sorting, and styling existing pieces.
+                - Identifies wardrobe gaps and recommends new additions.<br><br><br>
+                </p>
+        </div>
+    </div>
+
+    <div class="container3">
+        <div class="text-side">
+            <p class="header1"><b>Photoshoot & Event Styling</b><p>
+                <p>
+                ~ Providing fashion styling for professional photoshoots, special occasions, or branding needs.<br><br>
+    
+                - Includes look creation, outfit sourcing, and on-site styling.
+                - Coordinates with makeup artists, photographers, and designers if needed.<br><br><br>
+                </p>
+        </div>
+    </div>
+
+
+    <img src="01.png" alt="image" class="image">
+    <img src="02.png" alt="image" class="image2">
+    <img src="03.png" alt="image" class="image3">
+    <img src="line.png" alt="image" class="line1">
+    <img src="line.png" alt="image" class="line2">
+    <img src="line.png" alt="image" class="line3">
+</body>

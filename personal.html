@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #5e2b97, #c471ed);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: url('jennie chuu.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  background-color: white;
+  border-radius: 10px;
+  width: 400px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(144, 109, 252, 0.789);
+}
+
+.header {
+  background: linear-gradient(to right, #9d50bb, #6e48aa);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.header h2 span {
+  font-weight: 500;
+  font-size: 24px;
+  display: block;
+}
+
+.header p {
+  font-size: 12px;
+  margin: 8px 0;
+  opacity: 0.9;
+}
+
+.form-section {
+  padding: 25px 30px;
+}
+
+.form-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #5e2b97;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d6d6d6;
+  padding-bottom: 5px;
+}
+
+.input-group label {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #9d50bb;
+}
+
+.input-group input, .input-group textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2f1b4a;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #5B0010;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="contact-box">
+      <div class="header">
+        <h2>Yay!<br><span>Lets get in touch</span></h2>
+        <p>I'm available for direct messages and collaboration opportunities.</p>
+        <p>Feel free to reach out to me via WhatsApp or email only.</p>
+      </div>
+      <div class="form-section">
+        <h3>Message Me</h3>
+        <form action="mailto:senghtoimaran@gmail.com" method="post" enctype="text/plain" onsubmit="redirectToPage(); return false;">
+          <!-- WhatsApp Contact -->
+          <div class="input-group">
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="text" id="whatsapp" value="012-345-6789" readonly />
+          </div>
+
+          <!-- email Box -->
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" value="JennieChuu@gmail.com" readonly />
+          </div>
+
+          <!--guid-->
+<div class ="input-group">
+            <lebal for="message">Things to Include:</lebal>
+            <textarea id="message" name="message" placeholder= "
+- Full name 
+- Event Type or Purpose
+- Date & time of the event or deadline
+- location (if styling in person is needed)
+- Budget Range 
+- Body measurements
+- Contact Info (whatsapp/Phone)
+- Any Brands or colors to Avoid
+- Any Special notes (e.g allergies, religion/culture perferences,etc.)" readonly></textarea>
+</div>
+
+          <!-- Contact Button -->
+          <button type="submit" class="contact-btn">Done</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function redirectToPage() {
+      // This will redirect the user to a new page after clicking the 'Send Message' button
+      window.location.href = 'http://127.0.0.1:5500/html.seng/alldone.html'; // Replace with your desired page URL
+    }
+  </script>
+</body>
+</html>

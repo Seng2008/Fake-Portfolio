@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jennie Chuu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Special+Gothic+Expanded+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        body {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            font-size: 100px;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        body.loaded {
+            padding-top: 110px; /* Adjust depending on header height */
+        }
+
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        header {
+            background-color: #333;
+            color: #f1e1e1;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+        .header-left {
+            font-size: 1em;
+            cursor: pointer; /* clickable */
+            transition: color 0.3s ease;
+        }
+
+        .header-left:active {
+            color: rgb(199, 120, 235);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 50px; 
+        }
+        button {
+            background-color: #ce8ffb;
+            border-radius: 10px;
+            padding: 10px 15px; /* Adjusted padding */
+            width: auto; /* Adjust width to content */
+            border: none;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        button a {
+            color: rgb(62, 59, 59);
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none; /* Remove underline from links in buttons */
+        }
+
+        button:hover {
+            transform: scale(1.1); /* Slight pop-out effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: scale(0.9); /* Slight shrink when clicked */
+        }
+        .Title {
+            font-size: 1em;
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-weight: bold;
+            color: #8f76ff;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .text-side {
+            flex: 1; 
+            padding-right: 20px;
+            
+        }
+        .text-side p{
+            font-size: 0.23em;
+            font-family: "Patrick Hand", cursive;
+            font-weight: 500;
+            font-style: normal;
+            color: #333;
+            
+        }
+
+        .image-side {
+            flex: 1;
+        }
+
+        .image-side img {
+            width: 100%;
+            height: auto; 
+            border-radius: 10px;
+        }
+        .container {
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px;
+            background-color: #f0f0f0; 
+            border-radius: 10px;
+            max-width: 1100px;
+            max-height: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; 
+                text-align: center; 
+            }
+            .text-side {
+                padding-right: 0; 
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+
+            const headerLeft = document.querySelector('.header-left');
+            headerLeft.addEventListener('click', () => {
+                headerLeft.style.color = 'blue';
+
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 300);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="header-left">Jennie Chuu.</div>
+        <nav class="nav-buttons">
+            <button><a href="about.html">About me</a></button>
+            <button><a href="services.html">Services</a></button>
+            <button><a href="My Work.html">My Work</a></button>
+            <button><a href="Hire.html">Hire</a></button>
+        </nav>
+        </nav>
+    </header>
+
+    <h1 class="Title">About Me</h1>
+    <div class="container">
+        <div class="text-side">
+            
+            <p>
+                With a lifelong passion for fashion and an eye for detail, I've dedicated my career to helping others 
+                express their unique style. My approach to styling is highly collaborative, and my expertise spans a wide 
+                range of services, from personal wardrobe consultations and special occasion styling to editorial
+                 photoshoots and fashion show styling. <br><br>I'm adept at working with diverse styles, body types, and budgets,
+                  and I'm passionate about creating looks that are both on-trend and timeless. My goal is to help my clients feel confident 
+                and empowered through their clothing, ensuring they not only look their best but also feel their best.
+                <Br><br><button><a href="Hire.html">Let's connect!</a></button>
+            </p>
+        </div>
+        <div class="image-side">
+            <img src="Jennie profile.jpeg" alt="profile">
+        </div>
+    </div>
+
+</body>
+</html>
